@@ -1,6 +1,8 @@
 # BlazorServerSideDataGrid
 A simple RTL Server Side Data Grid for Blazor.
 
+این یک جدول سرور ساید بلیزره که فارسی رو هم ساپورت میکنه
+
 My goal was to create the simplest datagrid possible for serverside Blazor which could be easily modified and also extended.
 Unfortunately I found no RTL Blazor datagrid on the web or github, so I thought it would be a good opportunity to create one and share.
 
