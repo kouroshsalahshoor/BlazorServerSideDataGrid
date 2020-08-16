@@ -23,6 +23,8 @@ Frank Liu
 https://www.youtube.com/c/FrankLiuSoftware/playlists
 tutorials. Special thanks and lots of respect to both of them.
 
+Last but not least, I wanted to thank my boss Mr. S. Rafipoor, for all his support.
+
 I hope this will be the first Blazor project of many which will do other programmers job easier.
 
 Please contact me via my email if you had questions and thoughts:
