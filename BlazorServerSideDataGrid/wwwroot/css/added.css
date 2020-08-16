@@ -1,0 +1,52 @@
+﻿* {
+    text-align:right;
+}
+
+table th {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color:white;
+}
+
+
+/* == Just general styling, not relevant :) == */
+
+/*table {
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #1976D2;
+    color: #fff;
+}
+
+th,
+td {
+    padding: 1em .5em;
+}
+
+table tr {
+    color: #212121;
+}
+
+    table tr:nth-child(odd) {
+        background-color: #BBDEFB;
+    }*/
+
+.sort {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
+
+.asc {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+
+.desc {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}

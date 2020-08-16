@@ -1,0 +1,36 @@
+﻿<th scope="col">
+
+    @if (ColumnDefinition.Sortable)
+    {
+        <div class="row" @onclick="@(() => OnSort.InvokeAsync(ColumnDefinition.DataField))">
+            <div class="col-2">
+                @if (ColumnDefinition.SortDirection == SortDirection.NotSet)
+                {
+                    @*<i class="sort @(ColumnDefinition.SortDirection.ToString().ToLower())"></i>*@
+                }
+                else
+                {
+                    <i class="sort @(ColumnDefinition.SortDirection.ToString().ToLower())"></i>
+                }
+            </div>
+            <div class="col-10 text-center">@ColumnDefinition.ColumnTitle</div>
+        </div>
+    }
+    else
+    {
+        <div class="row col-12 text-center">@ColumnDefinition.ColumnTitle</div>
+    }
+
+    @if (ColumnDefinition.Searchable)
+    {
+        <div class="row col-12">
+            <input type="text" class="form-control" placeholder="@ColumnDefinition.PlaceHolder" @oninput="OnSearchTextChanged" />
+        </div>
+    }
+</th>
+
+@code {
+    [Parameter] public ColumnDefinition ColumnDefinition { get; set; }
+    [Parameter] public EventCallback<ChangeEventArgs> OnSearchTextChanged { get; set; }
+    [Parameter] public EventCallback<string> OnSort { get; set; }
+}

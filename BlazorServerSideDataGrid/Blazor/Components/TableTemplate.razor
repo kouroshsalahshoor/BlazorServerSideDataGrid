@@ -1,0 +1,44 @@
+﻿@typeparam TItem
+@*<div class="card">
+    <div class="card-header">
+        card header
+    </div>
+    <div class="card-body">*@
+
+<table class="table">
+    <caption>Page @CurrentPage of @TotalNbrOfPages</caption>
+    @*<caption>Page @CurrentPage of @TotalNbrOfPages - Showing @Items.Count of @TotalNbrOfItems</caption>*@
+    @*<caption>Total Nbr of Items: @TotalNbrOfItems</caption>*@
+    <thead>
+        <tr>
+            @TableHeader
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Items)
+        {
+            <tr>
+                @RowTemplate(item)
+            </tr>
+        }
+
+    </tbody>
+</table>
+
+@*</div>
+        <div class="card-footer text-muted">
+            card footer
+        </div>
+    </div>*@
+
+
+
+@code {
+    [Parameter] public RenderFragment TableHeader { get; set; }
+    [Parameter] public RenderFragment<TItem> RowTemplate { get; set; }
+    [Parameter] public IReadOnlyList<TItem> Items { get; set; }
+
+    [Parameter] public int TotalNbrOfItems { get; set; }
+    [Parameter] public int CurrentPage { get; set; }
+    [Parameter] public int TotalNbrOfPages { get; set; }
+}

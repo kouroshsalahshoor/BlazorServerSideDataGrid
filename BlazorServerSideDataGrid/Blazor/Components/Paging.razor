@@ -1,0 +1,76 @@
+﻿<nav aria-label="paging-bottom">
+    <ul class="pagination">
+
+        <li class="page-item @(CurrentPage == 1 ? "disabled" : "")" @onclick="@(() => OnClick.InvokeAsync(1))" title="First"><span class="page-link">&laquo;</span></li>
+        <li class="page-item @(CurrentPage == 1 ? "disabled" : "")" @onclick="@(() => OnClick.InvokeAsync(CurrentPage - 1))" title="Previous"><span class="page-link">&lsaquo;</span></li>
+
+        @if (CurrentPage <= (Radius + 1))
+        {
+            if (TotalPages <= ((2 * Radius) + 1))
+            {
+                for (int i = 1; i <= TotalPages; i++)
+                {
+                    var pageNumber = i;
+                    <li class="page-item @(CurrentPage == pageNumber ? "active" : "")" @onclick="@(() => OnClick.InvokeAsync(pageNumber))">
+                        <span class="page-link">@pageNumber</span>
+                    </li>
+                }
+            }
+            else
+            {
+                for (int i = 1; i <= ((2 * Radius) + 1); i++)
+                {
+                    var pageNumber = i;
+                    <li class="page-item @(CurrentPage == pageNumber ? "active" : "")" @onclick="@(() => OnClick.InvokeAsync(pageNumber))">
+                        <span class="page-link">@pageNumber</span>
+                    </li>
+                }
+            }
+        }
+        else if (CurrentPage >= (TotalPages - (Radius + 1)))
+        {
+            for (int i = (TotalPages - ((2 * Radius) + 1)); i <= TotalPages; i++)
+            {
+                var pageNumber = i;
+
+                <li class="page-item @(CurrentPage == pageNumber ? "active" : "")" @onclick="@(() => OnClick.InvokeAsync(pageNumber))">
+                    <span class="page-link">@pageNumber</span>
+                </li>
+            }
+        }
+        else
+        {
+            for (int i = (CurrentPage - Radius); i < CurrentPage; i++)
+            {
+                var pageNumber = i;
+
+                <li class="page-item @(CurrentPage == pageNumber ? "active" : "")" @onclick="@(() => OnClick.InvokeAsync(pageNumber))">
+                    <span class="page-link">@pageNumber</span>
+                </li>
+            }
+
+            <li class="page-item active">
+                <span class="page-link">@CurrentPage</span>
+            </li>
+
+            for (int i = CurrentPage + 1; i <= (CurrentPage + Radius); i++)
+            {
+                var pageNumber = i;
+
+                <li class="page-item @(CurrentPage == pageNumber ? "active" : "")" @onclick="@(() => OnClick.InvokeAsync(pageNumber))">
+                    <span class="page-link">@pageNumber</span>
+                </li>
+            }
+        }
+
+        <li class="page-item @(CurrentPage == TotalPages ? "disabled" : "")" @onclick="@(() => OnClick.InvokeAsync(CurrentPage + 1))" title="Next"><span class="page-link">&rsaquo;</span></li>
+        <li class="page-item @(CurrentPage == TotalPages ? "disabled" : "")" @onclick="@(() => OnClick.InvokeAsync(TotalPages))" title="Last"><span class="page-link">&raquo;</span></li>
+    </ul>
+</nav>
+
+@code {
+    [Parameter] public int CurrentPage { get; set; }
+    [Parameter] public int TotalPages { get; set; }
+    [Parameter] public int Radius { get; set; }
+    [Parameter] public EventCallback<int> OnClick { get; set; }
+}

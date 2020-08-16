@@ -1,0 +1,18 @@
+﻿<p>
+    Showing items @((((CurrentPage - 1) * PageSize) + 1).ToString("n0"))
+    to
+    @((FilteredItemsCount >= PageSize ? (((CurrentPage - 1) * PageSize) + PageSize) : FilteredItemsCount).ToString("n0"))
+    -
+    Page @CurrentPage.ToString("n0") of @TotalPages.ToString("n0")
+    -
+    @((FilteredItemsCount >= PageSize ? (TotalPages * PageSize) : FilteredItemsCount).ToString("n0"))
+    items filtered from @(ItemsCount.ToString("n0")) items
+</p>
+
+@code {
+    [Parameter] public int CurrentPage { get; set; }
+    [Parameter] public int PageSize { get; set; }
+    [Parameter] public int FilteredItemsCount { get; set; }
+    [Parameter] public int TotalPages { get; set; }
+    [Parameter] public int ItemsCount { get; set; }
+}
