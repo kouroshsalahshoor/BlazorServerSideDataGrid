@@ -9,8 +9,8 @@ The project is self explanatory, but for those who want to know this datagid has
 - filtering
 - paging
 - page size
-- RTL
-- busy indicator (the only nuget package is used: BlazorPro.SpinKit)
+- RTL (Bootstrap-rtl)
+- busy indicator (BlazorPro.SpinKit)
 - is tested with 10,000,000 items (longRunningOperation demo)
 
 This project is based on
