@@ -16,16 +16,20 @@ The project is self explanatory, but for those who want to know this datagid has
 - is tested with 10,000,000 items (longRunningOperation demo)
 
 This project is based on
-Curious Drive
+- Curious Drive
 https://www.youtube.com/watch?v=xr56fmgLl74&list=PL4WEkbdagHIR0RBe_P4bai64UDqZEbQap
 and also
-Frank Liu
+- Frank Liu
 https://www.youtube.com/c/FrankLiuSoftware/playlists
 tutorials. Special thanks and lots of respect to both of them.
 
-Last but not least, I wanted to thank my boss Mr. S. Rafipoor, for all his support.
+Last but not least, I wanted to thank Bani Tejarat Ariana (https://banitejarat.com/), my boss Mr. S. Rafipoor, for all his support.
 
 I hope this will be the first Blazor project of many which will do other programmers job easier.
+
+Todos (improvement):
+- pdf rotativa
+- csv
 
 Please contact me via my email if you had questions and thoughts:
 kourosh23@hotmail.com
