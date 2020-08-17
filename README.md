@@ -18,10 +18,14 @@ The project is self explanatory, but for those who want to know this datagid has
 This project is based on
 - Curious Drive
 https://www.youtube.com/watch?v=xr56fmgLl74&list=PL4WEkbdagHIR0RBe_P4bai64UDqZEbQap
+
 and also
+
 - Frank Liu
 https://www.youtube.com/c/FrankLiuSoftware/playlists
-tutorials. Special thanks and lots of respect to both of them.
+tutorials. 
+
+Special thanks and lots of respect to both of them.
 
 Last but not least, I wanted to thank Bani Tejarat Ariana (https://banitejarat.com/), my boss Mr. S. Rafipoor, for all his support.
 
