@@ -31,7 +31,7 @@ Last but not least, I wanted to thank Bani Tejarat Ariana (https://banitejarat.c
 
 I hope this will be the first Blazor project of many which will do other programmers job easier.
 
-Todos (improvement):
+Todos (improvements):
 - pdf rotativa
 - csv
 
