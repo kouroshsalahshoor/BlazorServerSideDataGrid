@@ -27,8 +27,6 @@ tutorials.
 
 Special thanks and lots of respect to both of them.
 
-Last but not least, I wanted to thank Bani Tejarat Ariana (https://banitejarat.com/), my boss Mr. S. Rafipoor, for all his support.
-
 I hope this will be the first Blazor project of many which will do other programmers job easier.
 
 Todos (improvements):
